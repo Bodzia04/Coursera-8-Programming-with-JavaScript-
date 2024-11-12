@@ -14,3 +14,26 @@ for(var i = 0; i < word.length; i++){
 };
 
 letterFinder('test', 't');
+
+
+
+
+// 14) Exercise Creating arrays and objects
+
+var clothes = [];
+clothes.push('hat');
+clothes.push('coat');
+clothes.push('shoes');
+clothes.push('t-shirt');
+clothes.push('pants');
+clothes.pop();
+clothes.push('sweater');
+console.log(clothes[2]);
+
+var favCar = {};
+favCar.color = 'black';
+favCar.covertible = false;
+console.log(favCar);
+
+
+
