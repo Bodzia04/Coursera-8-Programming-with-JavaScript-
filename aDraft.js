@@ -16,3 +16,15 @@ car.turnKey2 = () => {
 console.log(car.color)
 console.log(car.turnKey());
 console.log(car.turnKey2());
+
+var dog = {
+color: 'black',
+lenght: 60,
+};
+dog['type'] = 'corgi';
+
+console.log(dog);
+
+function add(a, b){
+  return a + b;
+}
