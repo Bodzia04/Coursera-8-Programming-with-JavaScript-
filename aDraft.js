@@ -28,3 +28,10 @@ console.log(dog);
 function add(a, b){
   return a + b;
 }
+
+
+function localVar(){
+  let value = 1;
+}
+
+console.log(value);
