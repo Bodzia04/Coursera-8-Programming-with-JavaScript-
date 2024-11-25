@@ -34,3 +34,49 @@ function styleAndCelebrate(color, background, fontSize, txt, reason){
 }
 
 styleAndCelebrate('ef7c8e', 'fae8e0', '30px', 'You made it!', 'champions');
+
+
+
+
+// 2) Introduction to Object-Oriented Programming
+// 9) Programming Assignment Building an object-oriented program
+// Task 1: Code a Person class
+
+class Person {
+  constructor(name = 'Tom', age = 20, energy = 100){
+    this.name = name;
+    this.age = age;
+    this.energy = energy;
+  }
+  sleep(){
+    this.energy += 10;
+  };
+  doSomethingFun(){
+    this.energy -= 10;
+    return this.energy;
+  };
+}
+
+
+// Task 2: Code a Worker class
+
+class Worker extends Person {
+  constructor(name, age, energy, xp = 0, hourlyWage = 10){
+    super(name, age, energy)
+    this.xp = xp;
+    this.hourlyWage = hourlyWage;
+  }
+  goToWork(){
+    this.xp += 10;
+    return this.xp;
+  };
+}
+
+
+// Task 3: Code a intern object
+let intern = new Worker('Bob', 21, 110, 0, 10);
+intern.goToWork()
+
+// Task 4: Code a manager object
+let manager = new Worker('Alice', 30, 120, 100, 30);
+manager.doSomethingFun();
