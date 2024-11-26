@@ -96,3 +96,20 @@ class Dog extends Animal {
 let result = new Dog();
 result.sayHell()
 
+
+let car2 = {
+  speed: 200,
+  color: 'red'
+}
+
+console.log(Object.keys(car2));
+console.log(Object.values(car2));
+console.log(Object.entries(car2));
+
+for(let key of Object.keys(car2)){
+  console.log(key,':', car2[key]);
+}
+
+
+
+
