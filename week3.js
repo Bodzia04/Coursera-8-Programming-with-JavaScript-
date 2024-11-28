@@ -80,3 +80,60 @@ intern.goToWork()
 // Task 4: Code a manager object
 let manager = new Worker('Alice', 30, 120, 100, 30);
 manager.doSomethingFun();
+
+
+
+
+// 3) Advanced JavaScript Features
+// 6) Programming Assignment Array and object iteration
+// Task: Iterate Over an Array
+// Step 1.** You are given an array of dairy products: 
+
+var dairy = ['cheese', 'sour cream', 'milk', 'yogurt', 'ice cream', 'milkshake'];
+
+function logDairy(dairy){
+  for(var product of dairy){
+    console.log(product);
+  }
+}
+
+logDairy(dairy);
+
+// Step 2.</b> You are given the following starter code:
+
+// розкоментувати нижній код............
+// const animal = {
+//   canJump: true,
+// };
+
+// const bird = Object.create(animal);
+// bird.canFly = true;
+// bird.hasFeathers = true;
+
+// function birdCan(){
+//   for(const key of Object.keys(bird)){
+//     console.log(`${key}: ${bird[key]}`);
+//   }
+// };
+
+// birdCan();
+// розкоментувати верхній код.............
+
+
+// Step 3.
+
+const animal = {
+  canJump: true,
+};
+
+const bird = Object.create(animal);
+bird.canFly = true;
+bird.hasFeathers = true;
+
+function animalCan(){
+  for(const key in bird){
+    console.log(`${key}: ${bird[key]}`);
+  }
+};
+
+animalCan();
