@@ -111,5 +111,56 @@ for(let key of Object.keys(car2)){
 }
 
 
+const fruit = ['apple', 'pear', 'orange'];
+
+function appendIndex(fruit, i){
+  console.log(`${i}: ${fruit}`);
+};
+
+fruit.forEach(appendIndex);
+
+const nums = [1, 2, 3, 4, 5, 6];
+
+nums.filter(function(num){
+  console.log(num > 4);
+})
+
+const result3 = [];
+const drone = {
+  speed: 100,
+  color: 'red'
+};
+
+const droneKeys = Object.keys(drone);
+droneKeys.forEach(key => {
+  result3.push(key, drone[key]);
+});
+
+console.log(result3);
+
+
+const number = [1, 2, 3, 4];
+
+const newNumber = [number, 5, 6, ...number]
+console.log(newNumber);
+console.log(number);
+
+function sum(a,b,c,d){
+  return a + b + c + d;
+};
+
+console.log(sum(...number));
+
+const user = { name: 'Bohdan', age: 20};
+
+const updateUser = {...user, city: 'New York'}
+console.log(updateUser);
+
+const greeting = 'Hello';
+const greetingOfChars = [...greeting]
+console.log(greetingOfChars);
+
+
+
 
 
