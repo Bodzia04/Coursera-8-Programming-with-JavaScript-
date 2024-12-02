@@ -161,6 +161,32 @@ const greetingOfChars = [...greeting]
 console.log(greetingOfChars);
 
 
+let [second] = number;
+console.log(second);
+
+let obj = {
+  key: 1,
+  value: 4
+};
+
+let output = {...obj};
+output.value -= output.key;
+console.log(output.value);
+
+function count(...basket){
+  console.log(basket.length);
+  };
+
+count(...number);
+
+const input = document.createElement('input');
+input.setAttribute('type', 'text')
+document.body.appendChild(input)
+
+
+
+
+
 
 
 
