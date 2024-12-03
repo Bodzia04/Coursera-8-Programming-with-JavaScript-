@@ -184,6 +184,48 @@ input.setAttribute('type', 'text')
 document.body.appendChild(input)
 
 
+function scopeTest(){
+  let y = 44;
+
+  let x = 4
+  console.log(x);
+}
+
+let x = 33;
+scopeTest()
+
+// class Animal {
+
+// }
+
+class Cat extends Animal{
+  constructor(){
+    super();
+    this.noise = 'mia'
+  }
+
+  makeNoise(){
+    return this.noise;
+  }
+}
+
+class Wolf extends Cat{
+  constructor(){
+    super();
+    this.noise = 'growl';
+  }
+};
+
+const soundWolf = new Wolf();
+console.log(soundWolf.makeNoise());
+
+
+const [a1, b1] = [1, 2, 3, 4]
+console.log(a1);
+console.log(b1);
+
+
+
 
 
 
