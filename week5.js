@@ -2,39 +2,29 @@
 // 1) End-of-Course Graded Assessment
 // 3) Programming Assignment Little Lemon Receipt Maker
 
-function getPrices (taxBoolean){
+function getPrices(taxBoolean){
   for(let i = 0; i < dishData.length; i++){
     let finalPrice;
-    const tax = 1.90;
+    const tax = 1.9;
 
     if(taxBoolean){
-      finalPrice = Math.floor(dishData[i].price * tax);
+      finalPrice = dishData[i].price * tax;
     }else if(taxBoolean == false){
-      finalPrice = Math.floor(dishData[i].price);
+      finalPrice = dishData[i].price;
     }else{
-      // я не дуже зрозумів що потрібно робити в step 6, такщо покишо залишаю такий код.
-      return 'You need to pass a boolean to the getPrices call!';
+      console.log('You need to pass a boolean to the getPrices call!');
+      return;
     }
-
-    console.log(`Dish: ${dishData[i].name} Price: $${finalPrice}`);
-    
+    console.log(`Dish: ${dishData[i].name} Price: $${finalPrice.toFixed(2)}`);
   }
 };
 
 function getDiscount(taxBoolean, guests){
-  const prices = getPrices(taxBoolean);
+  getPrices(taxBoolean);
 
-  if(typeof guests === 'number'){
-    let discount = 0;
-
-    if(guests > 0 && guests < 30){
-      if(guests < 5){
-        discount = 5;
-      }else if(guests >= 5){
-        discount = 10;
-      }
-      console.log('Discount is: $' + discount);
-    }
+  if(typeof guests === 'number' && guests > 0 && guests < 30){
+    const discount = guests < 5 ? 5 : 10;
+    console.log('Discount is: $' + discount);
   }else{
     console.log('The second argument must be a number between 0 and 30');
   } 
@@ -49,6 +39,7 @@ const dishData = [
     name: 'Pizza',
     price: 49
   }
-]
-getDiscount(true, 2) 
-getDiscount(false, 10)
+];
+
+getDiscount(true, 2);
+getDiscount(false, 10);
